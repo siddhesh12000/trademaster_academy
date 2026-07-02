@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Psychology | TradeMaster Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="theme-dark">
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="ph-fill ph-trend-up gold-text"></i>
+                    <span>TradeMaster</span>
+                </div>
+                <button class="close-sidebar d-mobile" id="closeSidebarBtn">
+                    <i class="ph ph-x"></i>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <span class="nav-section-title">Main</span>
+                    <a href="../index.html" class="nav-link">
+                        <i class="ph ph-house"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="roadmap.html" class="nav-link">
+                        <i class="ph ph-map-trifold"></i>
+                        <span>Learning Roadmap</span>
+                    </a>
+                    <a href="dashboard.html" class="nav-link">
+                        <i class="ph ph-chart-line-up"></i>
+                        <span>Progress Dashboard</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <span class="nav-section-title">Modules</span>
+                    <a href="smc.html" class="nav-link">
+                        <i class="ph ph-brain"></i>
+                        <span>Smart Money Concepts</span>
+                    </a>
+                    <a href="ict.html" class="nav-link">
+                        <i class="ph ph-target"></i>
+                        <span>ICT Concepts</span>
+                    </a>
+                    <a href="price-action.html" class="nav-link">
+                        <i class="ph ph-trend-up"></i>
+                        <span>Price Action</span>
+                    </a>
+                    <a href="technical-analysis.html" class="nav-link">
+                        <i class="ph ph-chart-bar"></i>
+                        <span>Technical Analysis</span>
+                    </a>
+                    <a href="supply-demand.html" class="nav-link">
+                        <i class="ph ph-arrows-down-up"></i>
+                        <span>Supply & Demand</span>
+                    </a>
+                    <a href="wyckoff.html" class="nav-link">
+                        <i class="ph ph-book-open"></i>
+                        <span>Wyckoff Theory</span>
+                    </a>
+                    <a href="risk-management.html" class="nav-link">
+                        <i class="ph ph-shield-check"></i>
+                        <span>Risk Management</span>
+                    </a>
+                    <a href="psychology.html" class="nav-link active">
+                        <i class="ph ph-head-circuit"></i>
+                        <span>Trading Psychology</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <span class="nav-section-title">Tools & Resources</span>
+                    <a href="journal.html" class="nav-link">
+                        <i class="ph ph-notebook"></i>
+                        <span>Trading Journal</span>
+                    </a>
+                    <a href="calculators.html" class="nav-link">
+                        <i class="ph ph-calculator"></i>
+                        <span>Calculators</span>
+                    </a>
+                    <a href="economic-calendar.html" class="nav-link">
+                        <i class="ph ph-calendar-blank"></i>
+                        <span>Economic Calendar</span>
+                    </a>
+                    <a href="market-sessions.html" class="nav-link">
+                        <i class="ph ph-globe-hemisphere-west"></i>
+                        <span>Market Sessions</span>
+                    </a>
+                    <a href="videos.html" class="nav-link">
+                        <i class="ph ph-video-camera"></i>
+                        <span>Video Library</span>
+                    </a>
+                    <a href="pdf-notes.html" class="nav-link">
+                        <i class="ph ph-file-pdf"></i>
+                        <span>PDF Notes</span>
+                    </a>
+                    <a href="glossary.html" class="nav-link">
+                        <i class="ph ph-text-aa"></i>
+                        <span>Trading Glossary</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+            <!-- Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggleBtn">
+                        <i class="ph ph-list"></i>
+                    </button>
+                    <div class="search-bar" id="openSearchBtn">
+                        <i class="ph ph-magnifying-glass"></i>
+                        <span class="search-placeholder">Search lessons, PDFs, videos...</span>
+                        <span class="keyboard-shortcut">⌘K</span>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <button class="icon-btn theme-toggle" id="themeToggleBtn" title="Toggle Dark/Light Mode">
+                        <i class="ph ph-moon"></i>
+                    </button>
+                    <a href="bookmarks.html" class="icon-btn" title="Bookmarks">
+                        <i class="ph ph-bookmark-simple"></i>
+                    </a>
+                    <button class="icon-btn notification-btn" title="Notifications">
+                        <i class="ph ph-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="user-profile">
+                        <div class="progress-ring-container">
+                            <svg class="progress-ring" width="40" height="40">
+                                <circle class="progress-ring-circle bg" cx="20" cy="20" r="16"></circle>
+                                <circle class="progress-ring-circle fill" cx="20" cy="20" r="16" stroke-dasharray="100 100" stroke-dashoffset="65"></circle>
+                            </svg>
+                            <img src="https://ui-avatars.com/api/?name=Trader+Pro&background=1E1E1E&color=FACC15" alt="Profile" class="profile-img">
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Module Header -->
+            <section class="section pb-0">
+                <div class="section-header">
+                    <div>
+                        <div class="badge mb-4" style="background: rgba(14, 165, 233, 0.2); color: #0ea5e9; border-color: rgba(14, 165, 233, 0.2);">Module 8</div>
+                        <h1 class="section-title">Trading Psychology</h1>
+                        <p class="text-muted mt-2">Master your emotions. Learn to overcome fear, greed, and FOMO to execute your edge flawlessly.</p>
+                    </div>
+                    <div class="d-mobile mt-4"></div>
+                    <div class="flex items-center gap-4">
+                        <button class="btn btn-outline btn-bookmark" title="Bookmark Module">
+                            <i class="ph ph-bookmark-simple"></i> Save
+                        </button>
+                        <button class="btn btn-primary gradient-btn" onclick="markLessonCompleted('psychology-module')" style="background: #0ea5e9; color: white;">
+                            Mark Complete <i class="ph ph-check"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Content Section -->
+            <section class="section pt-0">
+                <div class="article-content animate-fade-up">
+                    
+                    <h2>The Inner Game of Trading</h2>
+                    <p>Trading is 20% strategy and 80% psychology. The market is a mirror that reflects your deepest fears and insecurities. Success comes not from predicting the market, but from managing yourself.</p>
+                    
+                    <div class="concept-card glass-card">
+                        <div class="concept-title"><i class="ph ph-check-circle"></i> Complete Acceptance of Risk</div>
+                        <p>Before you click the buy or sell button, you must mentally accept that the money risked on the trade is already gone. If you are anxious while in a trade, your position size is too large or you haven't truly accepted the risk.</p>
+                    </div>
+
+                    <h2>The 4 Horsemen of Trading Psychology</h2>
+                    
+                    <div class="grid-cards mb-8" style="grid-template-columns: 1fr 1fr;">
+                        <div class="glass-card p-6" style="border-top: 4px solid var(--accent-red);">
+                            <h4 class="mb-4 text-xl flex items-center gap-2"><i class="ph ph-warning-circle red-text"></i> FOMO (Fear Of Missing Out)</h4>
+                            <p class="text-muted text-sm">Entering a trade late because price is moving fast and you want to be part of it. Usually results in buying the top or selling the bottom.</p>
+                            <p class="text-sm mt-2 font-semibold">Cure: Accept that the market provides endless opportunities.</p>
+                        </div>
+                        <div class="glass-card p-6" style="border-top: 4px solid var(--accent-gold);">
+                            <h4 class="mb-4 text-xl flex items-center gap-2"><i class="ph ph-coins gold-text"></i> Greed</h4>
+                            <p class="text-muted text-sm">Holding a winning trade too long hoping for a home run, or increasing risk excessively after a winning streak.</p>
+                            <p class="text-sm mt-2 font-semibold">Cure: Set mechanical take-profit targets and stick to them.</p>
+                        </div>
+                        <div class="glass-card p-6" style="border-top: 4px solid var(--accent-blue);">
+                            <h4 class="mb-4 text-xl flex items-center gap-2"><i class="ph ph-shield-slash blue-text"></i> Fear</h4>
+                            <p class="text-muted text-sm">Hesitating to take a valid setup because of recent losses, or closing a trade prematurely before it reaches its target.</p>
+                            <p class="text-sm mt-2 font-semibold">Cure: Trade smaller sizes to reduce emotional attachment.</p>
+                        </div>
+                        <div class="glass-card p-6" style="border-top: 4px solid var(--accent-green);">
+                            <h4 class="mb-4 text-xl flex items-center gap-2"><i class="ph ph-sword green-text"></i> Revenge Trading</h4>
+                            <p class="text-muted text-sm">Taking an impulsive, unplanned trade immediately after a loss to "win back" the money. This often leads to account blowouts.</p>
+                            <p class="text-sm mt-2 font-semibold">Cure: Walk away from the screen after any loss.</p>
+                        </div>
+                    </div>
+
+                    <h2>Overtrading</h2>
+                    <p>Overtrading is taking setups that don't meet your strict criteria just because you are bored or feel the need to be "in the market." Cash is a valid position. Sometimes the best trade is no trade.</p>
+
+                    <h2>The Trading Plan</h2>
+                    <p>A trading plan is your business plan. It removes in-the-moment decision making. It should dictate:</p>
+                    <ul>
+                        <li>What specific setups you trade (Your Edge)</li>
+                        <li>Which markets and timeframes you trade</li>
+                        <li>Your exact risk per trade (e.g., 1%)</li>
+                        <li>Your max daily loss limit (e.g., stop trading for the day if down 2%)</li>
+                    </ul>
+
+                    <div class="glass-card p-6 mb-8 mt-4 bg-darker">
+                        <h4 class="text-center mb-2">Mark Douglas on Consistency:</h4>
+                        <p class="text-center italic text-muted">"If you want to create consistent results, you must trade from a completely objective state of mind, which means you have to trade without fear."</p>
+                    </div>
+
+                    <!-- Quiz Section -->
+                    <div class="glass-card p-8 mt-8 mb-8" id="moduleQuiz">
+                        <h3 class="mb-4 flex items-center gap-2"><i class="ph ph-exam gold-text"></i> Knowledge Check</h3>
+                        <div class="quiz-question mb-6">
+                            <p class="mb-4 font-semibold">1. What is the most effective way to cure "Revenge Trading"?</p>
+                            <div class="flex flex-col gap-3">
+                                <label class="glass-card p-3 rounded cursor-pointer hover-effect flex items-center gap-3">
+                                    <input type="radio" name="q1" value="a">
+                                    <span>Double your position size on the next trade to win it back faster.</span>
+                                </label>
+                                <label class="glass-card p-3 rounded cursor-pointer hover-effect flex items-center gap-3">
+                                    <input type="radio" name="q1" value="b">
+                                    <span>Switch to a lower timeframe to find an immediate setup.</span>
+                                </label>
+                                <label class="glass-card p-3 rounded cursor-pointer hover-effect flex items-center gap-3">
+                                    <input type="radio" name="q1" value="c">
+                                    <span>Step away from the screens and close the charts for the day.</span>
+                                </label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary gradient-btn" onclick="submitQuiz('psy-q1', {q1: document.querySelector('input[name=q1]:checked')?.value})">Submit Answer</button>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="flex justify-between items-center mt-8 pt-8 border-t border-glass">
+                        <a href="risk-management.html" class="btn btn-outline">
+                            <i class="ph ph-arrow-left"></i> Back to Risk Management
+                        </a>
+                        <a href="dashboard.html" class="btn btn-primary gradient-btn">
+                            Complete Course! <i class="ph ph-check-circle"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Footer -->
+            <footer class="footer glass-card">
+                <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                    <p>&copy; 2026 TradeMaster Academy. All rights reserved.</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="modal-overlay" id="searchModal">
+        <div class="modal glass-card search-modal">
+            <div class="modal-header">
+                <div class="search-input-wrapper">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="modalSearchInput" placeholder="Search lessons, topics, PDFs..." autofocus>
+                </div>
+                <button class="close-modal" id="closeSearchBtn">ESC</button>
+            </div>
+            <div class="modal-body search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script src="../js/app.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/progress.js"></script>
+    <script src="../js/bookmark.js"></script>
+    <script src="../js/quiz.js"></script>
+</body>
+</html>

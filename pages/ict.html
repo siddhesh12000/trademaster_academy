@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT Concepts | TradeMaster Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="theme-dark">
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="ph-fill ph-trend-up gold-text"></i>
+                    <span>TradeMaster</span>
+                </div>
+                <button class="close-sidebar d-mobile" id="closeSidebarBtn">
+                    <i class="ph ph-x"></i>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <span class="nav-section-title">Main</span>
+                    <a href="../index.html" class="nav-link">
+                        <i class="ph ph-house"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="roadmap.html" class="nav-link">
+                        <i class="ph ph-map-trifold"></i>
+                        <span>Learning Roadmap</span>
+                    </a>
+                    <a href="dashboard.html" class="nav-link">
+                        <i class="ph ph-chart-line-up"></i>
+                        <span>Progress Dashboard</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <span class="nav-section-title">Modules</span>
+                    <a href="smc.html" class="nav-link">
+                        <i class="ph ph-brain"></i>
+                        <span>Smart Money Concepts</span>
+                    </a>
+                    <a href="ict.html" class="nav-link active">
+                        <i class="ph ph-target"></i>
+                        <span>ICT Concepts</span>
+                    </a>
+                    <a href="price-action.html" class="nav-link">
+                        <i class="ph ph-trend-up"></i>
+                        <span>Price Action</span>
+                    </a>
+                    <a href="technical-analysis.html" class="nav-link">
+                        <i class="ph ph-chart-bar"></i>
+                        <span>Technical Analysis</span>
+                    </a>
+                    <a href="supply-demand.html" class="nav-link">
+                        <i class="ph ph-arrows-down-up"></i>
+                        <span>Supply & Demand</span>
+                    </a>
+                    <a href="wyckoff.html" class="nav-link">
+                        <i class="ph ph-book-open"></i>
+                        <span>Wyckoff Theory</span>
+                    </a>
+                    <a href="risk-management.html" class="nav-link">
+                        <i class="ph ph-shield-check"></i>
+                        <span>Risk Management</span>
+                    </a>
+                    <a href="psychology.html" class="nav-link">
+                        <i class="ph ph-head-circuit"></i>
+                        <span>Trading Psychology</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <span class="nav-section-title">Tools & Resources</span>
+                    <a href="journal.html" class="nav-link">
+                        <i class="ph ph-notebook"></i>
+                        <span>Trading Journal</span>
+                    </a>
+                    <a href="calculators.html" class="nav-link">
+                        <i class="ph ph-calculator"></i>
+                        <span>Calculators</span>
+                    </a>
+                    <a href="economic-calendar.html" class="nav-link">
+                        <i class="ph ph-calendar-blank"></i>
+                        <span>Economic Calendar</span>
+                    </a>
+                    <a href="market-sessions.html" class="nav-link">
+                        <i class="ph ph-globe-hemisphere-west"></i>
+                        <span>Market Sessions</span>
+                    </a>
+                    <a href="videos.html" class="nav-link">
+                        <i class="ph ph-video-camera"></i>
+                        <span>Video Library</span>
+                    </a>
+                    <a href="pdf-notes.html" class="nav-link">
+                        <i class="ph ph-file-pdf"></i>
+                        <span>PDF Notes</span>
+                    </a>
+                    <a href="glossary.html" class="nav-link">
+                        <i class="ph ph-text-aa"></i>
+                        <span>Trading Glossary</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+            <!-- Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggleBtn">
+                        <i class="ph ph-list"></i>
+                    </button>
+                    <div class="search-bar" id="openSearchBtn">
+                        <i class="ph ph-magnifying-glass"></i>
+                        <span class="search-placeholder">Search lessons, PDFs, videos...</span>
+                        <span class="keyboard-shortcut">⌘K</span>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <button class="icon-btn theme-toggle" id="themeToggleBtn" title="Toggle Dark/Light Mode">
+                        <i class="ph ph-moon"></i>
+                    </button>
+                    <a href="bookmarks.html" class="icon-btn" title="Bookmarks">
+                        <i class="ph ph-bookmark-simple"></i>
+                    </a>
+                    <button class="icon-btn notification-btn" title="Notifications">
+                        <i class="ph ph-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="user-profile">
+                        <div class="progress-ring-container">
+                            <svg class="progress-ring" width="40" height="40">
+                                <circle class="progress-ring-circle bg" cx="20" cy="20" r="16"></circle>
+                                <circle class="progress-ring-circle fill" cx="20" cy="20" r="16" stroke-dasharray="100 100" stroke-dashoffset="65"></circle>
+                            </svg>
+                            <img src="https://ui-avatars.com/api/?name=Trader+Pro&background=1E1E1E&color=FACC15" alt="Profile" class="profile-img">
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Module Header -->
+            <section class="section pb-0">
+                <div class="section-header">
+                    <div>
+                        <div class="badge mb-4">Module 4</div>
+                        <h1 class="section-title">Inner Circle Trader (ICT) Concepts</h1>
+                        <p class="text-muted mt-2">Master algorithmic price delivery, time and price theory, and high-probability setups like the Silver Bullet.</p>
+                    </div>
+                    <div class="d-mobile mt-4"></div>
+                    <div class="flex items-center gap-4">
+                        <button class="btn btn-outline btn-bookmark" title="Bookmark Module">
+                            <i class="ph ph-bookmark-simple"></i> Save
+                        </button>
+                        <button class="btn btn-primary gradient-btn" onclick="markLessonCompleted('ict-module')">
+                            Mark Complete <i class="ph ph-check"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Content Section -->
+            <section class="section pt-0">
+                <div class="article-content animate-fade-up">
+                    <!-- Introduction -->
+                    <h2>Introduction to ICT</h2>
+                    <p>ICT (Inner Circle Trader) concepts are based on the premise that financial markets are controlled by an algorithm (IPDA - Interbank Price Delivery Algorithm). It heavily emphasizes the relationship between Time and Price, suggesting that specific setups only occur at specific times of the day.</p>
+                    
+                    <!-- Time and Price -->
+                    <h2>Time and Price Theory</h2>
+                    <p>Time is the most critical factor in ICT. If you have the right price level but the wrong time, the trade setup is invalid.</p>
+                    
+                    <div class="grid-cards mb-8" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                        <div class="glass-card p-4 border-t" style="border-top-color: var(--accent-blue);">
+                            <h4 class="mb-2 flex items-center gap-2"><i class="ph ph-clock blue-text"></i> Kill Zones</h4>
+                            <p class="text-muted text-sm">Specific time windows where highest volatility and manipulation occur. (e.g., London Open, NY Open).</p>
+                        </div>
+                        <div class="glass-card p-4 border-t" style="border-top-color: var(--accent-gold);">
+                            <h4 class="mb-2 flex items-center gap-2"><i class="ph ph-crosshair gold-text"></i> Silver Bullet</h4>
+                            <p class="text-muted text-sm">A specific 1-hour window (e.g., 10AM-11AM EST) designed to offer at least one high probability setup.</p>
+                        </div>
+                        <div class="glass-card p-4 border-t" style="border-top-color: var(--accent-red);">
+                            <h4 class="mb-2 flex items-center gap-2"><i class="ph ph-calendar red-text"></i> Daily Bias</h4>
+                            <p class="text-muted text-sm">The anticipated directional move for the day, determined by higher timeframe Market Maker Models.</p>
+                        </div>
+                    </div>
+
+                    <!-- Power of Three & Judas Swing -->
+                    <h2>Power of Three (AMD) & Judas Swing</h2>
+                    
+                    <div class="concept-card glass-card">
+                        <div class="concept-title">AMD Concept</div>
+                        <p><strong>Accumulation:</strong> Smart money builds positions in consolidation (often Asian session).</p>
+                        <p><strong>Manipulation (Judas Swing):</strong> A fake move opposite to the true daily bias to trap retail traders (often London session).</p>
+                        <p><strong>Distribution:</strong> The true expansion move in the direction of the daily bias (often NY session).</p>
+                    </div>
+
+                    <div class="glass-card p-6 mb-8 mt-4 text-center">
+                        <svg viewBox="0 0 500 250" width="100%" height="auto">
+                            <!-- Grid / Open Line -->
+                            <line x1="50" y1="125" x2="450" y2="125" stroke="var(--border-color)" stroke-width="1" stroke-dasharray="4,4" />
+                            <text x="50" y="120" fill="var(--text-muted)" font-family="sans-serif" font-size="12">Daily Open</text>
+                            
+                            <!-- Path -->
+                            <!-- Accumulation -->
+                            <path d="M 50 125 L 70 115 L 90 135 L 110 120 L 130 130 L 150 125" fill="none" stroke="var(--text-muted)" stroke-width="3"/>
+                            <!-- Manipulation (Judas) -->
+                            <path d="M 150 125 L 170 160 L 190 200 L 210 180" fill="none" stroke="var(--accent-red)" stroke-width="3"/>
+                            <!-- Distribution -->
+                            <path d="M 210 180 L 240 100 L 270 50 L 300 80 L 330 30 L 360 60 L 390 20" fill="none" stroke="var(--accent-green)" stroke-width="3"/>
+                            
+                            <!-- Labels -->
+                            <rect x="70" y="210" width="80" height="24" rx="4" fill="var(--bg-surface)" stroke="var(--border-color)"/>
+                            <text x="110" y="226" fill="var(--text-muted)" font-family="sans-serif" font-size="12" text-anchor="middle">Accumulation</text>
+                            
+                            <rect x="170" y="210" width="80" height="24" rx="4" fill="rgba(239, 68, 68, 0.1)" stroke="var(--accent-red)"/>
+                            <text x="210" y="226" fill="var(--accent-red)" font-family="sans-serif" font-size="12" text-anchor="middle">Judas Swing</text>
+
+                            <rect x="290" y="210" width="80" height="24" rx="4" fill="rgba(34, 197, 94, 0.1)" stroke="var(--accent-green)"/>
+                            <text x="330" y="226" fill="var(--accent-green)" font-family="sans-serif" font-size="12" text-anchor="middle">Distribution</text>
+                        </svg>
+                        <p class="text-muted text-sm mt-4">Illustration: The Power of Three (Bullish Day Example)</p>
+                    </div>
+
+                    <!-- PD Arrays -->
+                    <h2>PD Arrays (Premium/Discount Arrays)</h2>
+                    <p>PD Arrays are the specific institutional reference points ICT uses to enter trades. They are ranked by importance.</p>
+                    <ul>
+                        <li><strong>Old Highs / Old Lows:</strong> The most significant pools of liquidity.</li>
+                        <li><strong>Rejection Blocks:</strong> Wicks that sweep liquidity.</li>
+                        <li><strong>Order Blocks:</strong> Discussed in SMC.</li>
+                        <li><strong>Fair Value Gaps (FVG) / Imbalances:</strong> Areas where price delivered inefficiently.</li>
+                        <li><strong>Breaker Blocks / Mitigation Blocks:</strong> Failed order blocks.</li>
+                    </ul>
+
+                    <!-- SMT Divergence -->
+                    <h2>SMT Divergence (Smart Money Tool)</h2>
+                    <p>SMT Divergence is used to confirm accumulation or distribution by comparing closely correlated assets (e.g., EURUSD and GBPUSD, or NQ and ES).</p>
+                    <div class="concept-card glass-card">
+                        <p>If EURUSD makes a Higher High, but GBPUSD fails to make a Higher High and makes a Lower High instead, that crack in correlation is an SMT Divergence. It signals underlying institutional weakness or strength, often preceding a reversal.</p>
+                    </div>
+
+                    <!-- Market Maker Models -->
+                    <h2>Market Maker Models (MMXM)</h2>
+                    <p>The Market Maker Buy Model (MMBM) and Market Maker Sell Model (MMSM) outline the complete cycle of price delivery from consolidation, out to a higher timeframe POI, and reversing back to the original consolidation.</p>
+
+                    <!-- Quiz Section -->
+                    <div class="glass-card p-8 mt-8 mb-8" id="moduleQuiz">
+                        <h3 class="mb-4 flex items-center gap-2"><i class="ph ph-exam gold-text"></i> Knowledge Check</h3>
+                        <div class="quiz-question mb-6">
+                            <p class="mb-4 font-semibold">1. What is the "Judas Swing" in the Power of Three concept?</p>
+                            <div class="flex flex-col gap-3">
+                                <label class="glass-card p-3 rounded cursor-pointer hover-effect flex items-center gap-3">
+                                    <input type="radio" name="q1" value="a">
+                                    <span>The final expansion move of the day.</span>
+                                </label>
+                                <label class="glass-card p-3 rounded cursor-pointer hover-effect flex items-center gap-3">
+                                    <input type="radio" name="q1" value="b">
+                                    <span>A false move designed to trap traders before the real move occurs.</span>
+                                </label>
+                                <label class="glass-card p-3 rounded cursor-pointer hover-effect flex items-center gap-3">
+                                    <input type="radio" name="q1" value="c">
+                                    <span>The tight consolidation range during the Asian session.</span>
+                                </label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary gradient-btn" onclick="submitQuiz('ict-q1', {q1: document.querySelector('input[name=q1]:checked')?.value})">Submit Answer</button>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="flex justify-between items-center mt-8 pt-8 border-t border-glass">
+                        <a href="smc.html" class="btn btn-outline">
+                            <i class="ph ph-arrow-left"></i> Back to SMC
+                        </a>
+                        <a href="price-action.html" class="btn btn-primary gradient-btn">
+                            Next: Price Action <i class="ph ph-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Footer -->
+            <footer class="footer glass-card">
+                <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                    <p>&copy; 2026 TradeMaster Academy. All rights reserved.</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="modal-overlay" id="searchModal">
+        <div class="modal glass-card search-modal">
+            <div class="modal-header">
+                <div class="search-input-wrapper">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="modalSearchInput" placeholder="Search lessons, topics, PDFs..." autofocus>
+                </div>
+                <button class="close-modal" id="closeSearchBtn">ESC</button>
+            </div>
+            <div class="modal-body search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script src="../js/app.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/progress.js"></script>
+    <script src="../js/bookmark.js"></script>
+    <script src="../js/quiz.js"></script>
+</body>
+</html>

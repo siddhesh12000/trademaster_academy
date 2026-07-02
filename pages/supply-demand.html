@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supply & Demand | TradeMaster Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="theme-dark">
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="ph-fill ph-trend-up gold-text"></i>
+                    <span>TradeMaster</span>
+                </div>
+                <button class="close-sidebar d-mobile" id="closeSidebarBtn">
+                    <i class="ph ph-x"></i>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <span class="nav-section-title">Main</span>
+                    <a href="../index.html" class="nav-link">
+                        <i class="ph ph-house"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="roadmap.html" class="nav-link">
+                        <i class="ph ph-map-trifold"></i>
+                        <span>Learning Roadmap</span>
+                    </a>
+                    <a href="dashboard.html" class="nav-link">
+                        <i class="ph ph-chart-line-up"></i>
+                        <span>Progress Dashboard</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <span class="nav-section-title">Modules</span>
+                    <a href="smc.html" class="nav-link">
+                        <i class="ph ph-brain"></i>
+                        <span>Smart Money Concepts</span>
+                    </a>
+                    <a href="ict.html" class="nav-link">
+                        <i class="ph ph-target"></i>
+                        <span>ICT Concepts</span>
+                    </a>
+                    <a href="price-action.html" class="nav-link">
+                        <i class="ph ph-trend-up"></i>
+                        <span>Price Action</span>
+                    </a>
+                    <a href="technical-analysis.html" class="nav-link">
+                        <i class="ph ph-chart-bar"></i>
+                        <span>Technical Analysis</span>
+                    </a>
+                    <a href="supply-demand.html" class="nav-link active">
+                        <i class="ph ph-arrows-down-up"></i>
+                        <span>Supply & Demand</span>
+                    </a>
+                    <a href="wyckoff.html" class="nav-link">
+                        <i class="ph ph-book-open"></i>
+                        <span>Wyckoff Theory</span>
+                    </a>
+                    <a href="risk-management.html" class="nav-link">
+                        <i class="ph ph-shield-check"></i>
+                        <span>Risk Management</span>
+                    </a>
+                    <a href="psychology.html" class="nav-link">
+                        <i class="ph ph-head-circuit"></i>
+                        <span>Trading Psychology</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <span class="nav-section-title">Tools & Resources</span>
+                    <a href="journal.html" class="nav-link">
+                        <i class="ph ph-notebook"></i>
+                        <span>Trading Journal</span>
+                    </a>
+                    <a href="calculators.html" class="nav-link">
+                        <i class="ph ph-calculator"></i>
+                        <span>Calculators</span>
+                    </a>
+                    <a href="economic-calendar.html" class="nav-link">
+                        <i class="ph ph-calendar-blank"></i>
+                        <span>Economic Calendar</span>
+                    </a>
+                    <a href="market-sessions.html" class="nav-link">
+                        <i class="ph ph-globe-hemisphere-west"></i>
+                        <span>Market Sessions</span>
+                    </a>
+                    <a href="videos.html" class="nav-link">
+                        <i class="ph ph-video-camera"></i>
+                        <span>Video Library</span>
+                    </a>
+                    <a href="pdf-notes.html" class="nav-link">
+                        <i class="ph ph-file-pdf"></i>
+                        <span>PDF Notes</span>
+                    </a>
+                    <a href="glossary.html" class="nav-link">
+                        <i class="ph ph-text-aa"></i>
+                        <span>Trading Glossary</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+            <!-- Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggleBtn">
+                        <i class="ph ph-list"></i>
+                    </button>
+                    <div class="search-bar" id="openSearchBtn">
+                        <i class="ph ph-magnifying-glass"></i>
+                        <span class="search-placeholder">Search lessons, PDFs, videos...</span>
+                        <span class="keyboard-shortcut">⌘K</span>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <button class="icon-btn theme-toggle" id="themeToggleBtn" title="Toggle Dark/Light Mode">
+                        <i class="ph ph-moon"></i>
+                    </button>
+                    <a href="bookmarks.html" class="icon-btn" title="Bookmarks">
+                        <i class="ph ph-bookmark-simple"></i>
+                    </a>
+                    <button class="icon-btn notification-btn" title="Notifications">
+                        <i class="ph ph-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="user-profile">
+                        <div class="progress-ring-container">
+                            <svg class="progress-ring" width="40" height="40">
+                                <circle class="progress-ring-circle bg" cx="20" cy="20" r="16"></circle>
+                                <circle class="progress-ring-circle fill" cx="20" cy="20" r="16" stroke-dasharray="100 100" stroke-dashoffset="65"></circle>
+                            </svg>
+                            <img src="https://ui-avatars.com/api/?name=Trader+Pro&background=1E1E1E&color=FACC15" alt="Profile" class="profile-img">
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Module Header -->
+            <section class="section pb-0">
+                <div class="section-header">
+                    <div>
+                        <div class="badge mb-4" style="background: var(--accent-blue-dim); color: var(--accent-blue); border-color: var(--accent-blue-dim);">Module 5</div>
+                        <h1 class="section-title">Supply & Demand</h1>
+                        <p class="text-muted mt-2">Identify the true origin of major price moves by finding areas where institutional orders outbalance the market.</p>
+                    </div>
+                    <div class="d-mobile mt-4"></div>
+                    <div class="flex items-center gap-4">
+                        <button class="btn btn-outline btn-bookmark" title="Bookmark Module">
+                            <i class="ph ph-bookmark-simple"></i> Save
+                        </button>
+                        <button class="btn btn-primary gradient-btn" onclick="markLessonCompleted('sd-module')" style="background: var(--accent-blue);">
+                            Mark Complete <i class="ph ph-check"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Content Section -->
+            <section class="section pt-0">
+                <div class="article-content animate-fade-up">
+                    
+                    <h2>What is Supply and Demand?</h2>
+                    <p>Supply and Demand are considered fundamental concepts in microeconomics. Put simply, it is the study of the interaction between buyers and sellers to identify the market price (or equilibrium price) and the quantities of the goods or services supplied.</p>
+                    
+                    <h3>Supply</h3>
+                    <p>Supply describes the total amount of a particular good or service available for purchase at a specific price. When the price rises, producers will manufacture more to cater to buyers' needs and increase revenue. By contrast, when the price falls, they tend to narrow production due to the inability to cover production costs. Therefore, there is a positive correlation between the price and the number of goods or services provided. The higher the price is, the bigger the quantity is, and vice versa.</p>
+                    
+                    <h3>Demand</h3>
+                    <p>Demand indicates the number of goods or services that buyers are willing to purchase at a certain price. Understandably, when a product is becoming costly, people tend to look for an alternative product or wait for its price to fall to a more reasonable price level for a buy decision. This causes the demand to drop. Otherwise, when the price of a product drops, buyers tend to believe this is a bargain and will be more interested in buying the product. To put it simply, the correlation between prices and demand is negative.</p>
+
+                    <div class="concept-card glass-card">
+                        <p class="mb-0"><strong>Equilibrium Price:</strong> In any market, the equilibrium price is the price where the demand quantity equals the supply quantity. As long as there is enough goods and service to satisfy buyers’ needs, the price may not fluctuate widely. Once one side exceeds the other in quantity, this will result in an <strong>imbalance</strong>. This imbalance will cause prices to fluctuate until it achieves a new balance.</p>
+                    </div>
+
+                    <h2>Supply and Demand In Trading</h2>
+                    <p>In the financial market, the same principle applies. When the supply for an asset or instrument is high while the demand is low, this will drag the price lower. In contrast, when the demand exceeds supply, this will drive the price higher until a balance is achieved.</p>
+                    <p>The constant interaction between buyers (aka "bulls") and sellers (aka "bears") results in the uptrend and downtrend in the market. Traders use the law of supply and demand in the financial market to make profits from market imbalances.</p>
+
+                    <div class="grid-cards mb-8" style="grid-template-columns: 1fr 1fr;">
+                        <div class="glass-card p-6" style="border-top: 4px solid var(--accent-green);">
+                            <h4 class="mb-4 text-xl flex items-center gap-2"><i class="ph ph-arrow-up-right green-text"></i> Demand Zones</h4>
+                            <p class="text-muted">In a demand zone, buyers exceed sellers. The price tends to visit demand zones on a retracement to match pending buy orders. After those orders are filled, the price will move on to find other demand areas where buyers exceed sellers.</p>
+                        </div>
+                        <div class="glass-card p-6" style="border-top: 4px solid var(--accent-red);">
+                            <h4 class="mb-4 text-xl flex items-center gap-2"><i class="ph ph-arrow-down-right red-text"></i> Supply Zones</h4>
+                            <p class="text-muted">In a supply zone, sellers exceed buyers, driving the price lower according to the law of supply and demand. Generally, the supply zone, where many sell limit orders are waiting, is positioned above the current price level.</p>
+                        </div>
+                    </div>
+
+                    <h2>Market Balance – Imbalance In trading</h2>
+                    <p>The basic pattern of the market will go like this: <strong>balance &rarr; imbalance &rarr; balance &rarr; imbalance</strong>. When there is a difference between the supply quantity and demand quantity, an excess is established, and the market will trade in the direction of the predominant side until it reaches a balanced state again.</p>
+
+                    <div class="grid-cards mb-8" style="grid-template-columns: 1fr 1fr;">
+                        <div class="glass-card p-6 border-t" style="border-top-color: var(--accent-gold);">
+                            <h4 class="mb-2">Balance Area</h4>
+                            <p class="text-muted text-sm mb-0">In a balanced market, the number of buyers and sellers is more or less even. This balance paves the way for a quick price consensus. In this type of market, the price often moves in a small range area (no need to make any substantial move to reach a fair level).</p>
+                        </div>
+                        <div class="glass-card p-6 border-t" style="border-top-color: var(--accent-blue);">
+                            <h4 class="mb-2">Imbalance Area</h4>
+                            <p class="text-muted text-sm mb-0">Once buyers or sellers gain control of the battle, the market switch to an imbalanced state where the price goes in the direction of the stronger player. If the bulls gain more advantage, the price will climb, otherwise, it will decline.</p>
+                        </div>
+                    </div>
+
+                    <p>Trading with supply and demand entails a correct identification of a balanced zone, where we place our entry. Then, the following market imbalance will help traders to reap some profits. Professional traders are those who master the art of spotting a tradeable balanced area and patiently monitor the trade during the imbalance stage to make profits.</p>
+
+                    <h2>Different Patterns of Supply and Demand</h2>
+                    <p>Supply and demand areas can be found in two types of patterns on the chart: Reversal and Continuation.</p>
+                    
+                    <div class="grid-cards mb-8" style="grid-template-columns: 1fr 1fr;">
+                        <div class="glass-card p-6 border-t" style="border-top-color: var(--accent-blue);">
+                            <h4 class="mb-2">Reversal Patterns</h4>
+                            <ul class="text-muted text-sm mt-4">
+                                <li><strong>Drop-Base-Rally (DBR):</strong> Price is initially in a downtrend, forms a base, then rallies to the upside (Demand).</li>
+                                <li><strong>Rally-Base-Drop (RBD):</strong> Price starts with an uptrend, forms a base at the top, then falls (Supply).</li>
+                            </ul>
+                        </div>
+                        <div class="glass-card p-6 border-t" style="border-top-color: var(--accent-gold);">
+                            <h4 class="mb-2">Continuation Patterns</h4>
+                            <ul class="text-muted text-sm mt-4">
+                                <li><strong>Drop-Base-Drop (DBD):</strong> Price drops, slows for a while on a base, then continues to fall (Supply).</li>
+                                <li><strong>Rally-Base-Rally (RBR):</strong> Price increases, slows for a while on a base, then continues to increase (Demand).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2>How To Draw Supply/Demand Zones</h2>
+                    <p>Drawing a zone is centered around determining two lines around a basing structure: the <strong>Proximal Line</strong> (nearer to current price) and the <strong>Distal Line</strong> (further from current price). The way you draw them depends on your risk tolerance.</p>
+                    <ul class="text-muted mb-8">
+                        <li><strong>Medium-Risk Method:</strong> Distal line at the extreme high/low of the base. Proximal line at the lowest/highest body price of the base.</li>
+                        <li><strong>High-Risk Method:</strong> Both lines placed at the extremes of the base range. Triggers earlier, but bigger stop loss.</li>
+                        <li><strong>Low-Risk Method:</strong> Both lines placed tightly around the highest/lowest body/prices. Better stop loss, but might miss the trade.</li>
+                    </ul>
+
+                    <h2>Zone Quality Enhancers (Scoring System)</h2>
+                    <p>Not all zones are tradable. Professional traders use a scoring system to filter out low-probability zones.</p>
+                    <div class="grid-cards mb-8" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                        <div class="glass-card p-4">
+                            <h4 class="mb-2 text-sm">1. Strength of the move</h4>
+                            <p class="text-muted text-sm">Did the price leave the zone in a strong fashion with Extended-Range Candlesticks (ERCs)? (Stronger departure = higher score).</p>
+                        </div>
+                        <div class="glass-card p-4">
+                            <h4 class="mb-2 text-sm">2. Time at the zone</h4>
+                            <p class="text-muted text-sm">A small number of candlesticks (1-3) shows a strong imbalance. More than 5 candles indicates a weak zone.</p>
+                        </div>
+                        <div class="glass-card p-4">
+                            <h4 class="mb-2 text-sm">3. Freshness</h4>
+                            <p class="text-muted text-sm">Has the zone been tested before? A fresh, unvisited zone has the highest probability of holding.</p>
+                        </div>
+                        <div class="glass-card p-4">
+                            <h4 class="mb-2 text-sm">4. Risk/Reward Ratio</h4>
+                            <p class="text-muted text-sm">The distance to the next opposing zone should offer at least a 1:3 Risk/Reward ratio.</p>
+                        </div>
+                    </div>
+
+                    <h2>Advanced Concepts</h2>
+                    <div class="concept-card glass-card">
+                        <div class="concept-title"><i class="ph ph-arrows-left-right"></i> Flip Zones</div>
+                        <p class="text-muted text-sm mb-0">A flip zone is an area where the price flips from support to resistance or vice versa. When a supply zone is broken, it can become a demand zone, and a broken demand zone can become a supply zone. Trading a retest of a flip zone can be highly profitable.</p>
+                    </div>
+
+                    <div class="concept-card glass-card">
+                        <div class="concept-title"><i class="ph ph-squares-four"></i> Multi-Timeframe (MTF) Analysis</div>
+                        <p class="text-muted text-sm mb-0">MTF allows traders to grasp the big picture. You start by identifying the overall curve (the area between the nearest higher-timeframe supply and demand zones). You only look to <strong>sell high in the curve</strong> and <strong>buy low in the curve</strong>, using shorter timeframes for precise entries.</p>
+                    </div>
+
+                    <!-- Quiz Section -->
+                    <div class="glass-card p-8 mt-8 mb-8" id="moduleQuiz">
+                        <h3 class="mb-4 flex items-center gap-2"><i class="ph ph-exam gold-text"></i> Knowledge Check</h3>
+                        <div class="quiz-question mb-6">
+                            <p class="mb-4 font-semibold">1. Which of the following indicates a higher quality Supply or Demand zone?</p>
+                            <div class="flex flex-col gap-3">
+                                <label class="glass-card p-3 rounded cursor-pointer hover-effect flex items-center gap-3">
+                                    <input type="radio" name="q1" value="a">
+                                    <span>Price leaving the base slowly with many small candles.</span>
+                                </label>
+                                <label class="glass-card p-3 rounded cursor-pointer hover-effect flex items-center gap-3">
+                                    <input type="radio" name="q1" value="b">
+                                    <span>Price leaving the base rapidly with large, explosive candles.</span>
+                                </label>
+                                <label class="glass-card p-3 rounded cursor-pointer hover-effect flex items-center gap-3">
+                                    <input type="radio" name="q1" value="c">
+                                    <span>The zone has already been tested 3 or 4 times.</span>
+                                </label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary gradient-btn" onclick="submitQuiz('sd-q1', {q1: document.querySelector('input[name=q1]:checked')?.value})">Submit Answer</button>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="flex justify-between items-center mt-8 pt-8 border-t border-glass">
+                        <a href="technical-analysis.html" class="btn btn-outline">
+                            <i class="ph ph-arrow-left"></i> Back to Tech Analysis
+                        </a>
+                        <a href="wyckoff.html" class="btn btn-primary gradient-btn">
+                            Next: Wyckoff Theory <i class="ph ph-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Footer -->
+            <footer class="footer glass-card">
+                <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                    <p>&copy; 2026 TradeMaster Academy. All rights reserved.</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="modal-overlay" id="searchModal">
+        <div class="modal glass-card search-modal">
+            <div class="modal-header">
+                <div class="search-input-wrapper">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="modalSearchInput" placeholder="Search lessons, topics, PDFs..." autofocus>
+                </div>
+                <button class="close-modal" id="closeSearchBtn">ESC</button>
+            </div>
+            <div class="modal-body search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script src="../js/app.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/progress.js"></script>
+    <script src="../js/bookmark.js"></script>
+    <script src="../js/quiz.js"></script>
+</body>
+</html>

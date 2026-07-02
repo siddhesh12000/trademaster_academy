@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Money Concepts (SMC) | TradeMaster Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="theme-dark">
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="ph-fill ph-trend-up gold-text"></i>
+                    <span>TradeMaster</span>
+                </div>
+                <button class="close-sidebar d-mobile" id="closeSidebarBtn">
+                    <i class="ph ph-x"></i>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <span class="nav-section-title">Main</span>
+                    <a href="../index.html" class="nav-link">
+                        <i class="ph ph-house"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="roadmap.html" class="nav-link">
+                        <i class="ph ph-map-trifold"></i>
+                        <span>Learning Roadmap</span>
+                    </a>
+                    <a href="dashboard.html" class="nav-link">
+                        <i class="ph ph-chart-line-up"></i>
+                        <span>Progress Dashboard</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <span class="nav-section-title">Modules</span>
+                    <a href="smc.html" class="nav-link active">
+                        <i class="ph ph-brain"></i>
+                        <span>Smart Money Concepts</span>
+                    </a>
+                    <a href="ict.html" class="nav-link">
+                        <i class="ph ph-target"></i>
+                        <span>ICT Concepts</span>
+                    </a>
+                    <a href="price-action.html" class="nav-link">
+                        <i class="ph ph-trend-up"></i>
+                        <span>Price Action</span>
+                    </a>
+                    <a href="technical-analysis.html" class="nav-link">
+                        <i class="ph ph-chart-bar"></i>
+                        <span>Technical Analysis</span>
+                    </a>
+                    <a href="supply-demand.html" class="nav-link">
+                        <i class="ph ph-arrows-down-up"></i>
+                        <span>Supply & Demand</span>
+                    </a>
+                    <a href="wyckoff.html" class="nav-link">
+                        <i class="ph ph-book-open"></i>
+                        <span>Wyckoff Theory</span>
+                    </a>
+                    <a href="risk-management.html" class="nav-link">
+                        <i class="ph ph-shield-check"></i>
+                        <span>Risk Management</span>
+                    </a>
+                    <a href="psychology.html" class="nav-link">
+                        <i class="ph ph-head-circuit"></i>
+                        <span>Trading Psychology</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <span class="nav-section-title">Tools & Resources</span>
+                    <a href="journal.html" class="nav-link">
+                        <i class="ph ph-notebook"></i>
+                        <span>Trading Journal</span>
+                    </a>
+                    <a href="calculators.html" class="nav-link">
+                        <i class="ph ph-calculator"></i>
+                        <span>Calculators</span>
+                    </a>
+                    <a href="economic-calendar.html" class="nav-link">
+                        <i class="ph ph-calendar-blank"></i>
+                        <span>Economic Calendar</span>
+                    </a>
+                    <a href="market-sessions.html" class="nav-link">
+                        <i class="ph ph-globe-hemisphere-west"></i>
+                        <span>Market Sessions</span>
+                    </a>
+                    <a href="videos.html" class="nav-link">
+                        <i class="ph ph-video-camera"></i>
+                        <span>Video Library</span>
+                    </a>
+                    <a href="pdf-notes.html" class="nav-link">
+                        <i class="ph ph-file-pdf"></i>
+                        <span>PDF Notes</span>
+                    </a>
+                    <a href="glossary.html" class="nav-link">
+                        <i class="ph ph-text-aa"></i>
+                        <span>Trading Glossary</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+            <!-- Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggleBtn">
+                        <i class="ph ph-list"></i>
+                    </button>
+                    <div class="search-bar" id="openSearchBtn">
+                        <i class="ph ph-magnifying-glass"></i>
+                        <span class="search-placeholder">Search lessons, PDFs, videos...</span>
+                        <span class="keyboard-shortcut">⌘K</span>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <button class="icon-btn theme-toggle" id="themeToggleBtn" title="Toggle Dark/Light Mode">
+                        <i class="ph ph-moon"></i>
+                    </button>
+                    <a href="bookmarks.html" class="icon-btn" title="Bookmarks">
+                        <i class="ph ph-bookmark-simple"></i>
+                    </a>
+                    <button class="icon-btn notification-btn" title="Notifications">
+                        <i class="ph ph-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="user-profile">
+                        <div class="progress-ring-container">
+                            <svg class="progress-ring" width="40" height="40">
+                                <circle class="progress-ring-circle bg" cx="20" cy="20" r="16"></circle>
+                                <circle class="progress-ring-circle fill" cx="20" cy="20" r="16" stroke-dasharray="100 100" stroke-dashoffset="65"></circle>
+                            </svg>
+                            <img src="https://ui-avatars.com/api/?name=Trader+Pro&background=1E1E1E&color=FACC15" alt="Profile" class="profile-img">
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Module Header -->
+            <section class="section pb-0">
+                <div class="section-header">
+                    <div>
+                        <div class="badge mb-4">Module 3</div>
+                        <h1 class="section-title">Smart Money Concepts</h1>
+                        <p class="text-muted mt-2">Understand how institutions trade, identify footprints, and align your trades with the smart money.</p>
+                    </div>
+                    <div class="d-mobile mt-4"></div>
+                    <div class="flex items-center gap-4">
+                        <button class="btn btn-outline btn-bookmark" title="Bookmark Module">
+                            <i class="ph ph-bookmark-simple"></i> Save
+                        </button>
+                        <button class="btn btn-primary gradient-btn" onclick="markLessonCompleted('smc-module')">
+                            Mark Complete <i class="ph ph-check"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Content Section -->
+            <section class="section pt-0">
+                <div class="article-content animate-fade-up">
+                    <!-- Introduction -->
+                    <h2>Introduction to SMC</h2>
+                    <p>Smart Money Concepts (SMC) refers to the trading methodology that attempts to track the actions of institutional participants, central banks, and market makers. Instead of retail patterns, SMC focuses on liquidity, order flow, and market structure.</p>
+                    
+                    <div class="concept-card glass-card">
+                        <div class="concept-title"><i class="ph ph-lightbulb"></i> Core Principle</div>
+                        <p>The market is a mechanism for delivering price from one pool of liquidity to another. Institutions require massive liquidity to enter and exit their positions without causing extreme slippage.</p>
+                    </div>
+
+                    <!-- Market Structure -->
+                    <h2>Market Structure Basics</h2>
+                    <p>Understanding market structure is the foundation of SMC. It dictates the current trend and potential reversal points.</p>
+                    
+                    <div class="grid-cards mb-8" style="grid-template-columns: 1fr 1fr;">
+                        <div class="glass-card p-4">
+                            <h4 class="mb-2">Uptrend Structure</h4>
+                            <ul class="text-muted text-sm">
+                                <li><strong>HH:</strong> Higher High</li>
+                                <li><strong>HL:</strong> Higher Low</li>
+                            </ul>
+                        </div>
+                        <div class="glass-card p-4">
+                            <h4 class="mb-2">Downtrend Structure</h4>
+                            <ul class="text-muted text-sm">
+                                <li><strong>LH:</strong> Lower High</li>
+                                <li><strong>LL:</strong> Lower Low</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Break of Structure (BOS)</h3>
+                    <p>A BOS occurs when price breaks and closes past a previous structural high (in an uptrend) or low (in a downtrend), confirming the continuation of the trend.</p>
+
+                    <h3>Change of Character (CHOCH)</h3>
+                    <p>A CHOCH indicates a potential trend reversal. It happens when price fails to make a new HH/LL and instead breaks the previous structural HL/LH.</p>
+
+                    <!-- Abstract Chart Illustration for Structure -->
+                    <div class="glass-card p-6 mb-8 mt-4 text-center">
+                        <svg viewBox="0 0 500 200" width="100%" height="auto">
+                            <!-- Trendline -->
+                            <path d="M 50 150 L 150 50 L 200 100 L 350 20 L 400 80 L 480 30" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="5,5"/>
+                            <!-- Price Action -->
+                            <path d="M 50 150 L 150 50 L 200 100 L 350 20 L 400 80 L 480 30" fill="none" stroke="var(--accent-blue)" stroke-width="4"/>
+                            
+                            <!-- Labels -->
+                            <text x="140" y="40" fill="var(--text-main)" font-family="sans-serif" font-size="14" font-weight="bold">HH</text>
+                            <text x="190" y="125" fill="var(--text-main)" font-family="sans-serif" font-size="14" font-weight="bold">HL</text>
+                            <text x="340" y="10" fill="var(--text-main)" font-family="sans-serif" font-size="14" font-weight="bold">HH</text>
+                            <text x="390" y="105" fill="var(--text-main)" font-family="sans-serif" font-size="14" font-weight="bold">HL</text>
+                            
+                            <!-- BOS Line -->
+                            <line x1="150" y1="50" x2="250" y2="50" stroke="var(--accent-gold)" stroke-width="2" stroke-dasharray="4,4" />
+                            <text x="260" y="55" fill="var(--accent-gold)" font-family="sans-serif" font-size="12">BOS</text>
+                        </svg>
+                        <p class="text-muted text-sm mt-4">Illustration: Uptrend Structure & Break of Structure</p>
+                    </div>
+
+                    <!-- Liquidity -->
+                    <h2>Understanding Liquidity</h2>
+                    <p>Liquidity refers to areas on the chart where a large number of orders (stop losses, buy stops, sell stops) rest. Smart money targets these areas to build their positions.</p>
+                    <ul>
+                        <li><strong>Equal Highs (EQH) & Equal Lows (EQL):</strong> Retail traders view these as strong support/resistance, placing stop losses just beyond them. SMC views them as prime targets for liquidity sweeps.</li>
+                        <li><strong>Inducement (IDM):</strong> Minor structure highs/lows that induce early buyers/sellers before the true move occurs.</li>
+                    </ul>
+
+                    <!-- Blocks & Gaps -->
+                    <h2>Institutional Footprints</h2>
+                    
+                    <div class="concept-card glass-card" style="border-left-color: var(--accent-gold);">
+                        <div class="concept-title"><i class="ph ph-cube"></i> Order Block (OB)</div>
+                        <p>An Order Block is the last consecutive bearish candle(s) before a strong bullish impulse (Bullish OB), or the last bullish candle(s) before a strong bearish drop (Bearish OB). It represents where institutions placed massive orders.</p>
+                    </div>
+
+                    <div class="concept-card glass-card" style="border-left-color: var(--accent-green);">
+                        <div class="concept-title"><i class="ph ph-arrows-split"></i> Fair Value Gap (FVG)</div>
+                        <p>An FVG (or Imbalance) occurs when price moves so rapidly that liquidity is only offered on one side of the market. It is a three-candle formation where the wicks of the 1st and 3rd candles do not overlap, leaving a gap in the 2nd candle.</p>
+                    </div>
+                    
+                    <div class="concept-card glass-card" style="border-left-color: var(--accent-red);">
+                        <div class="concept-title"><i class="ph ph-swap"></i> Breaker Block & Mitigation Block</div>
+                        <p><strong>Breaker Block:</strong> A failed Order Block that resulted in a liquidity sweep (making a new high/low) before the trend reversed. Price often returns to test it from the other side.</p>
+                        <p class="mt-2"><strong>Mitigation Block:</strong> Similar to a Breaker, but it occurs without a prior liquidity sweep (fails to make a new high/low).</p>
+                    </div>
+
+                    <!-- Premium / Discount -->
+                    <h2>Premium, Discount & OTE</h2>
+                    <p>Institutions prefer to buy at a discount and sell at a premium.</p>
+                    <ul>
+                        <li><strong>Premium:</strong> Above the 50% equilibrium level of a price range. Ideal for finding short setups.</li>
+                        <li><strong>Discount:</strong> Below the 50% equilibrium level. Ideal for finding long setups.</li>
+                        <li><strong>Optimal Trade Entry (OTE):</strong> The "sweet spot" within the Fibonacci retracement, typically between the 61.8% and 78.6% levels.</li>
+                    </ul>
+
+                    <!-- Summary -->
+                    <h2>Summary</h2>
+                    <p>SMC is about reading the narrative of price. Identify the higher timeframe trend, spot where retail liquidity lies, wait for a sweep of that liquidity into an institutional POI (Order Block, FVG), and look for a lower timeframe CHOCH for entry.</p>
+
+                    <!-- Quiz Section -->
+                    <div class="glass-card p-8 mt-8 mb-8" id="moduleQuiz">
+                        <h3 class="mb-4 flex items-center gap-2"><i class="ph ph-exam gold-text"></i> Knowledge Check</h3>
+                        <div class="quiz-question mb-6">
+                            <p class="mb-4 font-semibold">1. What does a "Change of Character" (CHOCH) primarily indicate?</p>
+                            <div class="flex flex-col gap-3">
+                                <label class="glass-card p-3 rounded cursor-pointer hover-effect flex items-center gap-3">
+                                    <input type="radio" name="q1" value="a">
+                                    <span>A continuation of the current trend.</span>
+                                </label>
+                                <label class="glass-card p-3 rounded cursor-pointer hover-effect flex items-center gap-3">
+                                    <input type="radio" name="q1" value="b">
+                                    <span>A potential trend reversal.</span>
+                                </label>
+                                <label class="glass-card p-3 rounded cursor-pointer hover-effect flex items-center gap-3">
+                                    <input type="radio" name="q1" value="c">
+                                    <span>The market is consolidating.</span>
+                                </label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary gradient-btn" onclick="submitQuiz('smc-q1', {q1: document.querySelector('input[name=q1]:checked')?.value})">Submit Answer</button>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="flex justify-between items-center mt-8 pt-8 border-t border-glass">
+                        <a href="roadmap.html" class="btn btn-outline">
+                            <i class="ph ph-arrow-left"></i> Back to Roadmap
+                        </a>
+                        <a href="ict.html" class="btn btn-primary gradient-btn">
+                            Next: ICT Concepts <i class="ph ph-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Footer -->
+            <footer class="footer glass-card">
+                <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                    <p>&copy; 2026 TradeMaster Academy. All rights reserved.</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="modal-overlay" id="searchModal">
+        <div class="modal glass-card search-modal">
+            <div class="modal-header">
+                <div class="search-input-wrapper">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="modalSearchInput" placeholder="Search lessons, topics, PDFs..." autofocus>
+                </div>
+                <button class="close-modal" id="closeSearchBtn">ESC</button>
+            </div>
+            <div class="modal-body search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script src="../js/app.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/progress.js"></script>
+    <script src="../js/bookmark.js"></script>
+    <script src="../js/quiz.js"></script>
+</body>
+</html>
